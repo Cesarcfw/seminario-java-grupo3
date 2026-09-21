@@ -36,13 +36,7 @@ public abstract class Veiculo {
      */
     public abstract double calcularSeguro();
 
-    public void exibirResumo() {
-        System.out.printf(
-                "%s | Modelo: %s | Valor: R$ %.2f | Seguro: R$ %.2f%n",
-                getClass().getSimpleName(),
-                modelo,
-                valor,
-                calcularSeguro());
+    public String getTipo() {
+        return getClass().getSimpleName();
     }
 }
-

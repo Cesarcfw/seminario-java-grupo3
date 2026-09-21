@@ -10,13 +10,11 @@ public final class Main {
     public static void main(String[] args) {
         List<Veiculo> veiculos = List.of(
                 new Carro("Honda Civic", 150_000.00),
-                new Moto("Honda CB 500", 42_000.00));
+                new Moto("Honda CB 500", 42_000.00),
+                new Carro("Toyota Corolla", 145_000.00),
+                new Moto("Yamaha MT-03", 32_000.00));
 
-        System.out.println("=== Simulacao de seguros ===");
-
-        for (Veiculo veiculo : veiculos) {
-            veiculo.exibirResumo();
-        }
+        RelatorioSeguro relatorio = new RelatorioSeguro();
+        relatorio.exibir(veiculos);
     }
 }
-

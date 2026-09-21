@@ -1,0 +1,31 @@
+name: Verificacao Java
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  compilar-e-testar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar o codigo
+        uses: actions/checkout@v4
+
+      - name: Configurar o Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: Compilar
+        run: javac -d out src/main/java/br/com/grupo3/seguros/*.java src/test/java/br/com/grupo3/seguros/*.java
+
+      - name: Executar os testes
+        run: java -cp out br.com.grupo3.seguros.TesteVeiculos
+
