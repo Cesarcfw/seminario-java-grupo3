@@ -1,0 +1,13 @@
+# Arquivos gerados pela compilacao
+out/
+target/
+
+# Configuracoes locais das IDEs
+.vscode/
+.idea/
+*.iml
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
