@@ -5,6 +5,7 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -29,3 +30,5 @@ jobs:
       - name: Executar os testes
         run: java -cp out br.com.grupo3.seguros.TesteVeiculos
 
+      - name: Executar a demonstracao
+        run: java -cp out br.com.grupo3.seguros.Main

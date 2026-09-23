@@ -58,3 +58,12 @@ a cada pull request direcionado para essa branch.
 - O relatorio apresenta os valores em reais e calcula o total dos seguros.
 
 Requisito: JDK 21 ou uma versao compativel instalada.
+
+## Como apresentar sem baixar no computador da faculdade
+
+O projeto pode ser executado no navegador com **GitHub Codespaces**. O ambiente
+usa Java 21 por meio de `.devcontainer/devcontainer.json`. O GitHub Actions
+tambem pode ser iniciado manualmente para mostrar os testes e a saida do
+programa nos registros da execucao.
+
+Veja o passo a passo em [Como executar no dia](docs/Como_Executar_No_Dia.md).
